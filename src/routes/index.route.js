@@ -1,8 +1,9 @@
 import express from 'express';
-import examRoutes from './exam.routes';
+import newRoute from './newRoute'
+// import examRoute from './exam.routes';
 
-const allRoutes = express.Router();
+const router = express.Router();
 
-allRoutes.use('/users', examRoutes);
+// router.use('/exams', examRoute);
 
-export default allRoutes;
+export default router;

@@ -1,17 +1,10 @@
 import mongoose from 'mongoose';
 
-const connectDB = async () => {
+export default async function connectDB() {
   try {
-    const connection = await mongoose.connect('mongodb+srv://your_username:your_password@cluster0.ucipm.mongodb.net/your_database_name', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-    });
-    console.log(`MongoDB connected: ${connection.connection.host}`);
+    await mongoose.connect("mongodb+srv://ishimweeliab0:h1ghKQ7wJVQXp4tY@cluster0.gb1mzgf.mongodb.net/");
+    console.log("Connected to database.");
   } catch (error) {
-    console.error(`Error connecting to MongoDB: ${error.message}`);
-    process.exit(1); // Exit process with failure
+    console.log("Could not able to connect to database.", error);
   }
 };
-
-export default connectDB;

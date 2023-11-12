@@ -1,4 +1,4 @@
-import Exam from '../models/Exam';
+import Exam from '../models/exam.model';
 
 export const createExam = async (req, res) => {
   const { id, title, questions } = req.body;

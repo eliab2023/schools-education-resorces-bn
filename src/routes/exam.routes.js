@@ -1,8 +1,11 @@
 import express from 'express';
-import { createExam } from '../controllers/examController';
+import { getExams, createExam, updateExam, deleteExam } from '../controllers/exam.controller.js';
 
-const router = express.Router();
+ const router = express.Router();
 
-router.post('/create', createExam);
+// router.get('/', getExams);
+router.post('/', createExam);
+// router.put('/:id', updateExam);
+// router.delete('/:id', deleteExam);
 
 export default router;
